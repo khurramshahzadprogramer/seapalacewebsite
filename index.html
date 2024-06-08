@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sea Palace</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+        <a class="navbar-brand" href="#">Sea Palace</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#rooms">Rooms</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#gallery">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1>Welcome to Sea Palace</h1>
+            <p>Your perfect holiday destination</p>
+            <a href="#rooms" class="btn btn-primary">Explore Rooms</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <i class="icon-service icon-swimming-pool"></i>
+                        <h3>Swimming Pool</h3>
+                        <p>Enjoy our luxurious swimming pool.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <i class="icon-service icon-spa"></i>
+                        <h3>Spa & Wellness</h3>
+                        <p>Relax and rejuvenate with our spa services.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <i class="icon-service icon-dining"></i>
+                        <h3>Fine Dining</h3>
+                        <p>Experience gourmet dining at our restaurants.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="rooms-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="room-box">
+                        <img src="img/deluxe.png"  alt="Room 1" height="250px" width="350px">
+                        <h4>Deluxe Room</h4>
+                        <p>A comfortable room with a sea view.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="room-box">
+                        <img src="img/suite.webp" alt="Room 2" height="250px" width="350px">
+                        <h4>Suite</h4>
+                        <p>Spacious suite with luxury amenities.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="room-box">
+                        <img src="img/family.jpg" alt="Room 3" height="250px" width="350px">
+                        <h4>Family Room</h4>
+                        <p>Perfect for family stays with multiple beds.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section py-5">
+        <div class="container">
+            <h2 class="text-center">Gallery</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="img/gallery1.jpg"  height="250px" width="350px">
+                </div>
+                <div class="col-md-4">
+                    <img src="img/gallery2.jpg" height="250px" width="350px">
+                </div>
+                <div class="col-md-4">
+                    <img src="img/gallery3.jpg" height="250px" width="350px">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section py-5">
+        <div class="container">
+            <h2 class="text-center">Contact Us</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Your message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h3>Our Address</h3>
+                    <p>123 Sea Palace Road, Beach City, BC 12345</p>
+                    <p>Email: info@seapalace.com</p>
+                    <p>Phone: (123) 456-7890</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        // JavaScript for interactive elements
+
+$(document).ready(function() {
+    // Smooth scrolling for navigation links
+    $('a.nav-link').on('click', function(event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+
+            var hash = this.hash;
+
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function() {
+                window.location.hash = hash;
+            });
+        }
+    });
+});
+
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer-section text-center py-3 bg-info">
+        <p>2024 Sea Palace. All Rights Reserved made by Khurram Shahzad.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+/* Custom Styles */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.hero-section {
+    background: url('hero.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 100px 0;
+}
+
+.services-section .icon-service {
+    font-size: 50px;
+    color: #007bff;
+}
+
+.room-box img {
+    width: 100%;
+    height: auto;
+}
+
+.gallery-section img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.footer-section {
+    background: #f8f9fa;
+}
+
